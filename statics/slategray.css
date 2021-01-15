@@ -1,0 +1,50 @@
+@charset "utf-8";
+/*
+ *  默认皮肤
+ *  Author: chenjr 2015-03-09
+ */
+
+body { background-color: #4a4c5b; }
+.stencil-info, .box-stencil-banner p { color: #fff; }
+.stencil-box .title {
+    width: 206px;
+    height: 33px;
+    line-height: 33px;
+    color: #fcdc93;
+    background: url(stencil-bg-title-slategray.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.stencil-box .title-02 {
+    color: #b9b8c8;
+    display: inline-block;
+    max-width: 78%;
+    line-height: 32px;
+}
+.stencil-title-border { background: url(stencil-title-border-slategray.png) no-repeat center; background-size: 100% 1px; }
+.box-stencil-info { color: #fff; border-bottom: 1px solid #495663; }
+.stencil-app-list { border-bottom: 1px solid #495663; }
+.stencil-app-list-1 li { border-bottom: 1px solid #495663; }
+.stencil-app-list-2 li { border-bottom: 1px solid #495663; }
+.stencil-app-list-4 li { border-bottom: 1px solid #495663; }
+.ico-name { color: #fff; }
+.app-num { color: #fff; }
+.app-info { color: #fff; }
+.stencil-app-list-1.rank .rank-num { color: #fff; }
+.title2-icon-left{background: url(stencil-bg-title2-slategray-left.png) no-repeat; background-size: 16px 7px;}
+.title2-icon-right{background: url(stencil-bg-title2-slategray-right.png) no-repeat; background-size: 16px 7px;}
+.relative-specials-box .relative-title{ color: #fff; }
+/*********************** 应用按钮 ************************/
+/*下载*/
+.btn-down { color: #4a4c5b; background-color: #ff8375; }
+/*更新*/
+.btn-update { color: #4a4c5b; background-color: #ff8375; }
+/*暂停*/
+.btn-pause { color: #4a4c5b; background-color: #2ab59e; }
+/*继续*/
+.btn-continue { color: #4a4c5b; background-color: #3accb5; }
+/*安装*/
+.btn-install { color: #4a4c5b; background-color: #3accb5; }
+/*安装中*/
+.btn-installing { color: #4a4c5b; background-color: #3accb5; }
+/*打开*/
+.btn-open { color: #4a4c5b; background-color: #3accb5; }
