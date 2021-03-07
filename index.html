@@ -265,32 +265,6 @@
     </div>
 </div>
 
-<script>
-    // 动态加载主题css
-    var head = document.getElementsByTagName('head')[0];
-    var theme = getQueryString("theme");
-    // 定义有效主题
-    var themes = ['art', 'blue', 'bluegreen', 'cartoon', 'darkcyan',
-        'deepgray', 'deepgreen', 'festival', 'green', 'lightblue', 'lightcoffee',
-        'lightslategray', 'mediumaquamarine', 'orange', 'pp5', 'pp6', 'prussianblue',
-        'purple', 'rosered', 'slategray', 'white', 'yellow'];
-
-    if (theme && themes.indexOf(theme.toLowerCase()) !== -1) {
-        var linkTag = document.createElement('link');
-        linkTag.id = 'style-theme';
-        linkTag.setAttribute('rel', 'stylesheet');
-        linkTag.setAttribute('href', 'css/theme/' + theme + '.css?201611111556');
-
-        head.appendChild(linkTag);
-    }
-
-    function getQueryString(name) {
-        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-        var r = (window.location.search || window.location.hash).substr(1).match(reg);
-        if (r != null) return decodeURI(r[2]);
-        return "";
-    }
-</script>
 <div class="stencil-share">分享</div>
 
 <a href="javascript:void(0)">
@@ -348,14 +322,42 @@
         padding: 205px 40px 90px 20px;
     }
 </style>
+    <script>
+    // 动态加载主题css
+    var head = document.getElementsByTagName('head')[0];
+    var theme = getQueryString("theme");
+    // 定义有效主题
+    var themes = ['art', 'blue', 'bluegreen', 'cartoon', 'darkcyan',
+        'deepgray', 'deepgreen', 'festival', 'green', 'lightblue', 'lightcoffee',
+        'lightslategray', 'mediumaquamarine', 'orange', 'pp5', 'pp6', 'prussianblue',
+        'purple', 'rosered', 'slategray', 'white', 'yellow'];
+
+    if (theme && themes.indexOf(theme.toLowerCase()) !== -1) {
+        var linkTag = document.createElement('link');
+        linkTag.id = 'style-theme';
+        linkTag.setAttribute('rel', 'stylesheet');
+        linkTag.setAttribute('href', 'css/theme/' + theme + '.css?201611111556');
+
+        head.appendChild(linkTag);
+    }
+
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = (window.location.search || window.location.hash).substr(1).match(reg);
+        if (r != null) return decodeURI(r[2]);
+        return "";
+    }
+</script>
 <script>
-    $(document).ready(function(){
-        //PC端打开 显示二维码
+    
+    function time() {
         if (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
             $('.rightss').show();
             $('#url').qrcode({width: 130, height: 130, text: "http://in.quadrousel.com/"});
         }
-    });
+    }
+    setTimeout(time, 1000);
+
 //     //PC端打开 显示二维码
 //     if (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
 //         $('.rightss').show();
